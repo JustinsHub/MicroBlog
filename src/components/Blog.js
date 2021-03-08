@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Blog = () => {
+    //useParams
     return (
         <div>
             Single Blog post

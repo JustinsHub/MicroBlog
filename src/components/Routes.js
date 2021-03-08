@@ -7,9 +7,7 @@ import BlogPost from './BlogPost'
 import NotFound from './NotFound'
 
 const Routes = () => {
-    //add post function
-    //useContext ?
-    //write functions in context ?
+
     return (
         <div>
             <Switch>

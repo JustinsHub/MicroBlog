@@ -17,7 +17,7 @@ const BlogPost = () => {
     }
 
     const handleSubmit = (e) => {
-        
+        e.preventDefault()
     }
 
     const redirectCancel = () => {

@@ -1,11 +1,14 @@
 import Navbar from './components/Navbar'
 import Routes from './components/Routes'
+import BlogContextWrapper from './components/BlogContextWrapper'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Routes/>
+      <BlogContextWrapper>
+          <Navbar/>
+          <Routes/>
+      </BlogContextWrapper>
     </div>
   );
 }
