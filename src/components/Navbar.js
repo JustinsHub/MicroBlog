@@ -4,7 +4,7 @@ import '../styles/Navbar.css'
 
 const Navbar = () => {
     return (
-        <div className="Navbar">
+        <div className="jumbotron">
             <div>
             <h1>Microblog</h1>
             <p>Get in the Rithm of blogging!</p>

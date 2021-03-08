@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import Blogs from './Blogs'
+import Blog from './Blog'
 import BlogPost from './BlogPost'
 import NotFound from './NotFound'
 
 const Routes = () => {
+    //add post function
+    //useContext ?
+    //write functions in context ?
     return (
         <div>
             <Switch>
@@ -13,7 +17,11 @@ const Routes = () => {
                     <Blogs/>
                 </Route>
 
-                <Route exact path="/post">
+                <Route exact path='/:postid'>
+                    <Blog/>
+                </Route>
+
+                <Route exact path="/new">
                     <BlogPost/>
                 </Route>
 
