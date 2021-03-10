@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
 import {useHistory} from 'react-router-dom'
 
-const BlogPost = () => {
+const BlogPost = ({addBlog}) => {
     const INITIAL_STATE  = {
         title: "",
         description: "",
         body: ""
     }
     const [formData, setFormData] = useState(INITIAL_STATE)
-
     const history = useHistory()
 
     const handleChange = (e) => {
@@ -18,6 +17,8 @@ const BlogPost = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        addBlog(formData)
+        history.push('/blog')
     }
 
     const redirectCancel = () => {
@@ -26,7 +27,7 @@ const BlogPost = () => {
     return (
         <div className="m-5">
             <h1>New Post</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="title">Title:</label>
                     <input

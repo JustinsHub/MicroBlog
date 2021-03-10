@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Blog = () => {
+const Blog = ({title, description, body}) => {
     //useParams
     return (
         <div>
-            Single Blog post
+            {title}
+            {description}
+            {body}
         </div>
     )
 }
